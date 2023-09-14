@@ -10,13 +10,16 @@ export interface portfolio{
   "tool":string,
   "image":string,
   "category":string,
-  "code":string
+  "code":string,
+  "design":string,
+  "editer":string
 }
 
 
 
 // <portfolio> 라는 사용자 지정 타입을 portfolios라는 배열로 확장시키겠다!
 export interface portfolios extends Array<portfolio>{}
+
 
 
 

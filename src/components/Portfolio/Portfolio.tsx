@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 import {  portfolios } from '../../model/model'
-import PortfolioLi from '../PortfolioLi'
+// import PortfolioLi from '../PortfolioLi'
 import { AiOutlineClose } from 'react-icons/ai';
 import { gsap } from 'gsap';
 
 
+// export default function Portfolio({onClick}) {
 export default function Portfolio() {
 
   // 1. data안에 만든 json 파일 불러오기
@@ -42,13 +43,12 @@ export default function Portfolio() {
 
   // 7. 콘솔에 클릭한 카테고리 찍어보기
 
-  console.log(selectCategory)
+  // console.log(selectCategory)
 
 
   // 8. 클릭한 카테고리에 맞는 아이템을 저장하기
 
   const [categoryItems, setCategoryItems] = useState<portfolios>([])
-
 
   //const testArray:string[]=['a', 'b']
 
@@ -76,15 +76,40 @@ export default function Portfolio() {
 
 
 
-  const modal = useRef();
+  const modal:any = useRef();
 
-  const modalBg = useRef();
+  const modalBg:any = useRef();
 
 
   useEffect(()=>{
+    closeModal()
+  },[])
+
+  const closeModal=()=>{
     gsap.set(modal.current,{display:'none'})
     gsap.set(modalBg.current,{display:'none'})
-  },[])
+  }
+
+  const openModal=()=>{
+    gsap.set(modalBg.current,{display:'block',onComplete:()=>{
+      gsap.set(modal.current,{display:'block'})    
+    }})
+  }
+
+
+
+  // const openModal=(test)=>{
+
+   
+
+  //  // console.log(productItem)
+  // }, [allProducts])
+
+
+  // }
+
+
+  const [selectModal, setSelectModal] = useState()
   
 
   
@@ -129,29 +154,81 @@ export default function Portfolio() {
                 figma, photoshop, figma user 
               </p>
             </li> */}
-            {
+            {/* {
               categoryItems.map((item)=>(               
                 
-                <PortfolioLi info={item}/>
-                // <PortfolioLi info={item} test={useId}/>
+                <PortfolioLi info={item} onClick={item.id}/>
               ))
-            }
+            } */}
+        {
+              categoryItems.map((item)=>(               
+                
+                item.device==="PC" ?                
+
+                <li key={item.id} onClick={()=>{
+                  openModal()
+                  setSelectModal(item)
+                }}>
+                  <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px]'>
+                    <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto '/>
+                  </p>
+                  <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
+                  <p className='
+                  font-[NotoSansKR] text-[12px] font-bold text-[#626262] mb-[20px] relative top-0 left-0 after:absolute after:bottom-[-10px] after:left-0 after:block after:w-[70px] after:contents-[""] after:h-[2px] after:bg-[#1B263C]
+                  '>{item.date}
+                  </p>
+                  <p className='font-[NotoSansKR] text-[14px] font-medium text-[#050505]'>
+                    {item.tool}
+                  </p>
+                </li>
+    
+                :
+    
+              
+                <li key={item.id} onClick={()=>{
+                  openModal()
+                  setSelectModal(item)
+                }}>
+                {/* img를 감싸고있는 p태그에 group속성을 넣어주고 코드이미지를 기존에 invisible처리해주고 group에 hover하면 보이게 처리해줬다 */}
+                <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group'>
+                  <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto absolute top-0 left-0'/>
+                  <img src={item.code} alt='코드이미지' className='w-full h-[280px] absolute invisible group-hover:visible'/>
+                </p>
+                <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
+                <p className='
+                font-[NotoSansKR] text-[12px] font-bold text-[#626262] mb-[20px] relative top-0 left-0 after:absolute after:bottom-[-10px] after:left-0 after:block after:w-[70px] after:contents-[""] after:h-[2px] after:bg-[#1B263C]
+                '>{item.date}
+                </p>
+                <p className='font-[NotoSansKR] text-[14px] font-medium text-[#050505]'>
+                  {item.tool}
+                </p>
+              </li>
+              ))
+            
+        }
+
           </ul>
+
+
+
+
+
     
             <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-20' ref={modal}>
               <div className='w-full h-[280px] bg-[#B6B6B6] relative'>
                 <div className='w-full h-[250px] bg-gradient-to-b from-[#6D9AF4] to-[#283858] p-[40px] box-border relative'>
                   <div className='w-[210px] h-full'>
-                    <p className='text-[32px] font-bold font-[NotoSansKR] text-white'>dalhae(PC)</p>
+                    <p className='text-[32px] font-bold font-[NotoSansKR] text-white'>{selectModal.title}</p>
                     <p className='text-[14px] font-medium font-[NotoSansKR] text-white mt-[50px]'>
                       실측부터 시공까지 대표가 직접!
                       <span className='block mt-[10px]'>창호시공 전문기업 달해기업</span> 
                     </p>
                   </div>
                   <div className='absolute right-[80px] top-[40px] w-[320px] h-[250px] border-solid border-[8px] border-black box-border rounded-lg overflow-hidden'>
-                    <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/>
+                    {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
+                    <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
                   </div>
-                  <button className='absolute right-[10px] top-[10px] text-white text-[30px]'>
+                  <button className='absolute right-[10px] top-[10px] text-white text-[30px]' onClick={closeModal}>
                     <AiOutlineClose/>
                   </button>
                 </div>
@@ -167,7 +244,7 @@ export default function Portfolio() {
                 <p className='font-bold text-[16px] font-[NotoSansKR] mb-[10px] mt-[20px]'>사용기술</p>
                 <p className='font-medium text-[12px] font-[NotoSansKR] text-[#626262] mb-[5px]'>
                   <span className='font-bold mr-[5px]'>Design-Tool:</span>
-                  figma ,photoshop  
+                  {selectModal.design} 
                 </p>
                 <p className='font-medium text-[12px] font-[NotoSansKR] text-[#626262] mb-[5px]'>
                   <span className='font-bold mr-[5px]'>Editer:</span>
@@ -207,7 +284,7 @@ export default function Portfolio() {
 
 
         {/* hidden 속성을 사용해서 처음에 숨겨준다 */}
-        <div className='absolute top-0 left-0 bg-black w-full h-full opacity-80 z-10' ref={modalBg}></div>
+        <div className='absolute top-0 left-0 bg-black w-full h-full opacity-80 z-10' ref={modalBg} onClick={closeModal}></div>
       </section>
     
     

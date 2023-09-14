@@ -7,7 +7,9 @@
     "tool":"html, CSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
     "image":"/images/project_FJ_PC.png",
     "category":"Javascript",
-    "code":"/images/project_DH_mobile_code.png"
+    "code":"/images/project_DH_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   },
   {
     "id":"002",
@@ -17,7 +19,9 @@
     "tool":"html, cSS, Javascript, gsap, swiper, figma, photoshop, git",
     "image":"/images/project_Naming.png",
     "category":"Javascript",
-    "code":"/images/project_DH_mobile_code.png"
+    "code":"/images/project_DH_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   },
   {
     "id":"003",
@@ -27,7 +31,9 @@
     "tool":"react, gsap, swiper, firebase, figma, photoshop",
     "image":"/images/project_DH_PC.png",
     "category":"React-Js",
-    "code":"/images/project_DH_mobile_code.png"
+    "code":"/images/project_DH_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   },
   {
     "id":"004",
@@ -37,7 +43,9 @@
     "tool":"react, gsap, swiper, firebase, figma, photoshop",
     "image":"/images/profile_PC.png",
     "category":"React-Js",
-    "code":"/images/project_DH_mobile_code.png"
+    "code":"/images/project_DH_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   },
   {
     "id":"010",
@@ -47,7 +55,9 @@
     "tool":"html, cSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
     "image":"/images/project_FJ_mobile.png",
     "category":"Mobile",
-    "code":"/images/project_FJ_mobile_code.png"
+    "code":"/images/project_FJ_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   },
   {
     "id":"011",
@@ -57,7 +67,8 @@
     "tool":"react, gsap, swiper, firebase, figma, photoshop",
     "image":"/images/project_DH_mobile.png",
     "category":"Mobile",
-    "code":"/images/project_DH_mobile_code.png"
-    
+    "code":"/images/project_DH_mobile_code.png",
+    "design":"figma, photoshop",
+    "editer":"VS code"
   }
 ]

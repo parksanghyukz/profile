@@ -1,0 +1,63 @@
+[
+  {
+    "id":"001",
+    "title":"Football Join",
+    "device":"PC",
+    "date":"July-05-2023",
+    "tool":"html, CSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
+    "image":"/images/project_FJ_PC.png",
+    "category":"Javascript",
+    "code":"/images/project_DH_mobile_code.png"
+  },
+  {
+    "id":"002",
+    "title":"Naming",
+    "device":"PC",
+    "date":"July-05-2023",
+    "tool":"html, cSS, Javascript, gsap, swiper, figma, photoshop, git",
+    "image":"/images/project_Naming.png",
+    "category":"Javascript",
+    "code":"/images/project_DH_mobile_code.png"
+  },
+  {
+    "id":"003",
+    "title":"Dalhae",
+    "device":"PC",
+    "date":"August-23-2023",
+    "tool":"react, gsap, swiper, firebase, figma, photoshop",
+    "image":"/images/project_DH_PC.png",
+    "category":"React-Js",
+    "code":"/images/project_DH_mobile_code.png"
+  },
+  {
+    "id":"004",
+    "title":"Profile",
+    "device":"PC",
+    "date":"september-22-2023",
+    "tool":"react, gsap, swiper, firebase, figma, photoshop",
+    "image":"/images/profile_PC.png",
+    "category":"React-Js",
+    "code":"/images/project_DH_mobile_code.png"
+  },
+  {
+    "id":"010",
+    "title":"Football Join(Mobile)",
+    "device":"Mobile",
+    "date":"July-05-2023",
+    "tool":"html, cSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
+    "image":"/images/project_FJ_mobile.png",
+    "category":"Mobile",
+    "code":"/images/project_FJ_mobile_code.png"
+  },
+  {
+    "id":"011",
+    "title":"Dalhae (Mobile)",
+    "device":"Mobile",
+    "date":"August-23-2023",
+    "tool":"react, gsap, swiper, firebase, figma, photoshop",
+    "image":"/images/project_DH_mobile.png",
+    "category":"Mobile",
+    "code":"/images/project_DH_mobile_code.png"
+    
+  }
+]

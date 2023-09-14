@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E4EEFD;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* layer를 사용하면 각 지정되어있는 태그들 h1,div등등을 설정할 수 있다 */
+/* @layer{
+  h1{
+    @apply 
+  }
+} */
+
+
+/* @apply를 사용하면 적용할 수 있다 */
+.testBtn{
+  @apply w-10 h-10; 
+}

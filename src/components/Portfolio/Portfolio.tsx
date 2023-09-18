@@ -5,24 +5,30 @@ import { portfolios } from '../../model/model';
 // import PortfolioLi from '../PortfolioLi'
 import { AiOutlineClose } from 'react-icons/ai';
 import { gsap } from 'gsap';
+import useProduct from '../../Hooks/useProduct';
+
 
 
 // export default function Portfolio({onClick}) {
 export default function Portfolio() {
 
   // 1. data안에 만든 json 파일 불러오기
-  useEffect(()=>{
-    axios.get('/data/portfolio.json').then((res)=>{
-      setAllPortfolio(res.data)
-    })
-  }, [])
+  // useEffect(()=>{
+  //   axios.get('/data/portfolio.json').then((res)=>{
+  //     setAllPortfolio(res.data)
+  //   })
+  // }, [])
 
-
- 
 
   // 2. useState를 사용해서 상태관리해주기
-  const [allPortfolio, setAllPortfolio] = useState<portfolios>([]) 
+  // const [allPortfolio, setAllPortfolio] = useState<portfolios>([]) 
   // 타입지정 1. model.ts만든 portfolio라는 타입을 useState에 넣어주기
+
+
+  const [allPortfolio] = useProduct();
+
+
+
 
 
 
@@ -86,6 +92,8 @@ export default function Portfolio() {
 
 
   const [selectModal, setSelectModal] = useState<any>([])
+
+
   
 
   const goPage=()=>{
@@ -100,10 +108,29 @@ export default function Portfolio() {
     }
   }
 
+
+
+  // 높이구한것
+
+
+  const PortfolioSection:any = useRef();
+  // let PortfolioHeight:number = PortfolioSection.current.offsetHeight;
+  // let PortfolioHeight:number = 1600;
+  // useProduct(PortfolioHeight)
+
+  function ProjectHeight():void{
+    const PortfolioHeight = PortfolioSection.current.offsetHeight;
+    console.log(PortfolioHeight)
+
+    return PortfolioHeight;
+  }
+
+
+
   return (
     <>
     
-      <section className='w-full h-[1400px] relative'>
+      <section className='w-full h-[1400px] relative' ref={PortfolioSection}>
         <p className=' 
           w-[140px] h-[50px] text-center m-auto font-bold font-sans text-[34px] relative left-0 top-0
           before:absolute before:left-[30px] before:bottom-[-10px] before:contents-[""] before:block before:w-20 before:h-1 before:bg-black
@@ -139,7 +166,7 @@ export default function Portfolio() {
                   setSelectModal(item)
                   openModal()
                 }}>
-                  <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px]'>
+                  <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px] cursor-pointer'>
                     <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto '/>
                   </p>
                   <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
@@ -161,7 +188,7 @@ export default function Portfolio() {
                   openModal()
                 }}>
                 {/* img를 감싸고있는 p태그에 group속성을 넣어주고 코드이미지를 기존에 invisible처리해주고 group에 hover하면 보이게 처리해줬다 */}
-                <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group'>
+                <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group cur'>
                   <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto absolute top-0 left-0'/>
                   <img src={item.code} alt='코드이미지' className='w-full h-[280px] absolute invisible group-hover:visible'/>
                 </p>
@@ -185,7 +212,7 @@ export default function Portfolio() {
 
 
     
-            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-20 overflow-scroll' ref={modal} >
+            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-[9999] overflow-scroll' ref={modal} >
               <div className='w-full h-[280px] bg-[#B6B6B6] relative'>
                 <div className='w-full h-[250px] bg-gradient-to-b from-[#6D9AF4] to-[#283858] p-[40px] box-border relative'>
                       <div className='w-[210px] h-full'>
@@ -292,7 +319,7 @@ export default function Portfolio() {
 
 
         {/* hidden 속성을 사용해서 처음에 숨겨준다 */}
-        <div className='absolute top-0 left-0 bg-black w-full h-full opacity-80 z-10' ref={modalBg} onClick={closeModal}></div>
+        <div className='fixed top-0 left-0 bg-black w-full h-full opacity-80 z-[1000]' ref={modalBg} onClick={closeModal}></div>
       </section>
     
     

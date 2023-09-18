@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 export default function About() {
 
@@ -46,7 +46,6 @@ export default function About() {
             }
           </ul>
         </div>
-        
       </section>
     </>
   )

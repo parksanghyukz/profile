@@ -9,7 +9,9 @@
     "category":"Javascript",
     "code":"/images/project_DH_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"HTML, CSS, Javascript, Gsap, SSR",
+    "project":"Personal project"
   },
   {
     "id":"002",
@@ -21,7 +23,9 @@
     "category":"Javascript",
     "code":"/images/project_DH_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"HTML, CSS, Javascript, Gsap, SSR",
+    "project":"Team project"
   },
   {
     "id":"003",
@@ -33,19 +37,23 @@
     "category":"React-Js",
     "code":"/images/project_DH_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"React, Swiper, Gsap, Firebase,Kakao map api",
+    "project":"Personal project"
   },
   {
     "id":"004",
     "title":"Profile",
     "device":"PC",
     "date":"september-22-2023",
-    "tool":"react, gsap, swiper, firebase, figma, photoshop",
+    "tool":"react, gsap, swiper, firebase, tailwind CSS, Typescript figma, photoshop,",
     "image":"/images/profile_PC.png",
     "category":"React-Js",
     "code":"/images/project_DH_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"React, Swiper, Gsap, Firebase, tailwind CSS, Typescript",
+    "project":"Personal project"
   },
   {
     "id":"010",
@@ -57,7 +65,9 @@
     "category":"Mobile",
     "code":"/images/project_FJ_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"HTML, CSS, Javascript, Gsap, SSR",
+    "project":"Personal project"
   },
   {
     "id":"011",
@@ -69,6 +79,8 @@
     "category":"Mobile",
     "code":"/images/project_DH_mobile_code.png",
     "design":"figma, photoshop",
-    "editer":"VS code"
+    "editer":"VS code",
+    "lang":"React, Swiper, Gsap, Firebase,Kakao map api",
+    "project":"Personal project"
   }
 ]

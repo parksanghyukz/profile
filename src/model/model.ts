@@ -1,5 +1,4 @@
 
-
 export interface portfolio{
   // export 할경우 여러개를 가져올수 있음 하지만 export default를 사용하는경우 객체 하나만 가져올수 있음
   // 여러개 export할 경우 사용할 컴포넌트에서 {}안에 ,를 사용해 여러개 가져올 수 있음
@@ -12,7 +11,8 @@ export interface portfolio{
   "category":string,
   "code":string,
   "design":string,
-  "editer":string
+  "editer":string,
+  "lang":string
 }
 
 

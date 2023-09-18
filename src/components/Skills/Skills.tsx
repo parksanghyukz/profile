@@ -14,7 +14,7 @@ export default function Skills() {
 
   return (
     <>
-      <section className='box-border w-full h-[2350px] pt-[150px] pb-[150px]'>
+      <section className='box-border w-full mh-[2250px] pt-[150px] mb-[150px]'>
       <p className=' 
         w-[110px] h-[50px] text-center m-auto font-bold font-sans text-[34px] relative left-0 top-0
         after:absolute after:left-[15px] after:bottom-[-5px] after:contents-[""] after:block after:w-20 after:h-1 after:bg-black

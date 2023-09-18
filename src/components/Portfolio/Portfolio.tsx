@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
-import {  portfolios } from '../../model/model'
+// import {  portfolios } from '../../model/model'
+import { portfolios } from '../../model/model';
 // import PortfolioLi from '../PortfolioLi'
 import { AiOutlineClose } from 'react-icons/ai';
 import { gsap } from 'gsap';
@@ -50,12 +51,6 @@ export default function Portfolio() {
 
   const [categoryItems, setCategoryItems] = useState<portfolios>([])
 
-  //const testArray:string[]=['a', 'b']
-
-
-  
-
-
   // 9. useEffect사용하기
 
   useEffect(()=>{
@@ -69,15 +64,8 @@ export default function Portfolio() {
   },[selectCategory, allPortfolio])
 
 
- 
-
-  // 모달 열고 닫기
-  // const [isOpen, setIsOpen] = useState(false)
-
-
 
   const modal:any = useRef();
-
   const modalBg:any = useRef();
 
 
@@ -97,22 +85,20 @@ export default function Portfolio() {
   }
 
 
-
-  // const openModal=(test)=>{
-
-   
-
-  //  // console.log(productItem)
-  // }, [allProducts])
-
-
-  // }
-
-
-  const [selectModal, setSelectModal] = useState()
+  const [selectModal, setSelectModal] = useState<any>([])
   
 
-  
+  const goPage=()=>{
+    if(selectModal.title==="Football Join"){
+      window.open("http://parksang123.dothome.co.kr/footballjoin_rwd/index.html")
+    }else if(selectModal.title==="Naming"){
+      window.open("http://rkddbsghks.dothome.co.kr/naming_project/")
+    }else if(selectModal.title==="Dalhae"){
+      window.open("https://dalhaecompany.netlify.app/")
+    }else if(selectModal.title==="Profile"){
+      window.open("")
+    }
+  }
 
   return (
     <>
@@ -126,12 +112,14 @@ export default function Portfolio() {
           Web Application
         </span>
 
-        <ul className='flex flex-row justify-between w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter] cursor-pointer '>
+        <ul className='flex flex-row justify-between w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter]'>
+        {/* <ul className=' w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter]'> */}
           {
             categorys.map((item)=>(      
               // 6. li를 클릭했을때 setSelectCategory를 실행한다    
-                <li className={selectCategory===item.text && 'text-center w-[25%] h-auto bg-[#1B263C] text-white '} key={item.index} onClick={()=>{setSelectCategory(item.text)}}>
-                  {item.text}
+                <li className={selectCategory===item.text ? 'select_Btn' : 'cursor-pointer'} key={item.index} 
+                onClick={()=>{setSelectCategory(item.text)}}>
+                {item.text}
                 </li>
             ))
           }
@@ -140,34 +128,16 @@ export default function Portfolio() {
 
         <div className='w-[1000px] min-h-[950px] m-auto mt-[40px] relative'>
           <ul className='w-full h-full grid grid-cols-3 gap-[95px] absolute'>
-            {/* <li>
-              <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px]'>
-                <img src='../../images/project_FJ_PC.png' alt='포트폴리오이미지' className='w-full h-auto '/>
-              </p>
-              <p className=' font-[NotoSansKR] text-[18px] font-bold'>Football Join(PC)</p>
-              <p className='
-              font-[NotoSansKR] text-[12px] font-bold text-[#626262] mb-[20px] relative top-0 left-0 after:absolute after:bottom-[-10px] after:left-0 after:block after:w-[70px] after:contents-[""] after:h-[2px] after:bg-[#1B263C]
-              '>july-05-2023
-              </p>
-              <p className='font-[NotoSansKR] text-[14px] font-medium text-[#050505]'>
-                html, cSS, Javascript, gsap, swiper, gsap
-                figma, photoshop, figma user 
-              </p>
-            </li> */}
-            {/* {
-              categoryItems.map((item)=>(               
-                
-                <PortfolioLi info={item} onClick={item.id}/>
-              ))
-            } */}
-        {
-              categoryItems.map((item)=>(               
+
+          {
+            categoryItems.map((item)=>(               
                 
                 item.device==="PC" ?                
 
                 <li key={item.id} onClick={()=>{
-                  openModal()
+
                   setSelectModal(item)
+                  openModal()
                 }}>
                   <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px]'>
                     <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto '/>
@@ -186,8 +156,9 @@ export default function Portfolio() {
     
               
                 <li key={item.id} onClick={()=>{
-                  openModal()
+
                   setSelectModal(item)
+                  openModal()
                 }}>
                 {/* img를 감싸고있는 p태그에 group속성을 넣어주고 코드이미지를 기존에 invisible처리해주고 group에 hover하면 보이게 처리해줬다 */}
                 <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group'>
@@ -203,9 +174,9 @@ export default function Portfolio() {
                   {item.tool}
                 </p>
               </li>
-              ))
+            ))
             
-        }
+          }
 
           </ul>
 
@@ -214,31 +185,56 @@ export default function Portfolio() {
 
 
     
-            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-20' ref={modal}>
+            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-20 overflow-scroll' ref={modal} >
               <div className='w-full h-[280px] bg-[#B6B6B6] relative'>
                 <div className='w-full h-[250px] bg-gradient-to-b from-[#6D9AF4] to-[#283858] p-[40px] box-border relative'>
-                  <div className='w-[210px] h-full'>
-                    <p className='text-[32px] font-bold font-[NotoSansKR] text-white'>{selectModal.title}</p>
-                    <p className='text-[14px] font-medium font-[NotoSansKR] text-white mt-[50px]'>
-                      실측부터 시공까지 대표가 직접!
-                      <span className='block mt-[10px]'>창호시공 전문기업 달해기업</span> 
-                    </p>
-                  </div>
-                  <div className='absolute right-[80px] top-[40px] w-[320px] h-[250px] border-solid border-[8px] border-black box-border rounded-lg overflow-hidden'>
+                      <div className='w-[210px] h-full'>
+                        <p className='text-[32px] font-bold font-[NotoSansKR] text-white'>{selectModal.title}</p>
+                        <p className='text-[14px] font-medium font-[NotoSansKR] text-white mt-[50px]'>
+                          실측부터 시공까지 대표가 직접!
+                          <span className='block mt-[10px]'>창호시공 전문기업 달해기업</span> 
+                        </p>
+                      </div>
+                {
+
+                  selectModal.device==='PC' ? 
+
+
+                
+                    <div className='absolute right-[80px] top-[40px] w-[320px] h-[250px] border-solid border-[8px] border-black box-border rounded-lg overflow-hidden cursor-pointer group brightness-100 hover:brightness-75'
+                   
+                    >
+                      {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
+                      <button className='w-[110px] h-[34px] bg-black absolute right-[105px] top-[100px] text-white text-center text-[20px] font-bold invisible group-hover:visible'  onClick={goPage}>
+                        Go to site
+                      </button>
+                      <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
+
+                    </div>
+                
+                  :
+
+                  <div className='absolute right-[120px] top-[40px] w-[160px] h-[320px] cursor-pointer'onClick={goPage}>
                     {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
                     <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
                   </div>
-                  <button className='absolute right-[10px] top-[10px] text-white text-[30px]' onClick={closeModal}>
-                    <AiOutlineClose/>
-                  </button>
-                </div>
+
+                }
+
+                    <button className='absolute right-[10px] top-[10px] text-white text-[30px]' onClick={closeModal}>
+                      <AiOutlineClose/>
+                    </button>
+                  </div>
+
               </div>
 
               <div className='w-full h-auto pl-[40px] box-border'>
-                <p className='font-bold text-[16px] font-[NotoSansKR] mb-[10px] mt-[20px]'>personal project</p>
+                <p className='font-bold text-[16px] font-[NotoSansKR] mb-[10px] mt-[20px]'>
+                  {selectModal.project}
+                </p>
                 <p className='font-medium text-[12px] font-[NotoSansKR] text-[#626262]'>
                   <span className='font-bold mr-[5px]'>Date:</span>
-                  2023.08.23  
+                  {selectModal.date}
                 </p>
 
                 <p className='font-bold text-[16px] font-[NotoSansKR] mb-[10px] mt-[20px]'>사용기술</p>
@@ -248,11 +244,11 @@ export default function Portfolio() {
                 </p>
                 <p className='font-medium text-[12px] font-[NotoSansKR] text-[#626262] mb-[5px]'>
                   <span className='font-bold mr-[5px]'>Editer:</span>
-                  Vscode  
+                  {selectModal.editer}
                 </p>
                 <p className='font-medium text-[12px] font-[NotoSansKR] text-[#626262]'>
-                  <span className='font-bold mr-[5px]'>Tool:</span>
-                  react, swiper, gsap, firebase,kakao map api   
+                  <span className='font-bold mr-[5px]'>Lang:</span>
+                  {selectModal.lang}   
                 </p>
               </div>
 
@@ -272,6 +268,18 @@ export default function Portfolio() {
                   <span className='font-bold mr-[5px]'>
                     라우터설계 : 
                   </span>
+                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
+                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
+                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
+                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
+                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
+                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
+                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
+                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
+                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
+                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
+                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
+                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
                   createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
                   react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
                   또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.

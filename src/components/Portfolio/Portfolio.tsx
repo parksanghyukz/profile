@@ -6,6 +6,7 @@ import { portfolios } from '../../model/model';
 import { AiOutlineClose } from 'react-icons/ai';
 import { gsap } from 'gsap';
 import useProduct from '../../Hooks/useProduct';
+import useHeight from '../../Hooks/useHeight';
 
 
 
@@ -25,9 +26,9 @@ export default function Portfolio() {
   // 타입지정 1. model.ts만든 portfolio라는 타입을 useState에 넣어주기
 
 
+
+  // (1,2번 통합) Hook 폴더 안에있는 useProduct.tsx에서 가져오기!
   const [allPortfolio] = useProduct();
-
-
 
 
 
@@ -114,18 +115,20 @@ export default function Portfolio() {
 
 
   const PortfolioSection:any = useRef();
+
+  useHeight(PortfolioSection)
   // let PortfolioHeight:number = PortfolioSection.current.offsetHeight;
   // let PortfolioHeight:number = 1600;
   // useProduct(PortfolioHeight)
 
-  function ProjectHeight():void{
-    const PortfolioHeight = PortfolioSection.current.offsetHeight;
-    console.log(PortfolioHeight)
+  // function ProjectHeight():void{
+  //   const PortfolioHeight:any = PortfolioSection.current.offsetHeight;
+  //   console.log(PortfolioHeight)
 
-    return PortfolioHeight;
-  }
+  //   return PortfolioHeight;
+  // }
 
-
+  // console.log(ProjectHeight())
 
   return (
     <>
@@ -140,34 +143,56 @@ export default function Portfolio() {
         </span>
 
         <ul className='flex flex-row justify-between w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter]'>
-        {/* <ul className=' w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter]'> */}
-          {
-            categorys.map((item)=>(      
-              // 6. li를 클릭했을때 setSelectCategory를 실행한다    
-                <li className={selectCategory===item.text ? 'select_Btn' : 'cursor-pointer'} key={item.index} 
-                onClick={()=>{setSelectCategory(item.text)}}>
-                {item.text}
-                </li>
-            ))
-          }
+          {/* <ul className=' w-[580px] h-[40px] m-auto mt-[40px] text-[24px] font-bold font-[Inter]'> */}
+            {
+              categorys.map((item)=>(      
+                // 6. li를 클릭했을때 setSelectCategory를 실행한다    
+                  <li className={selectCategory===item.text ? 'select_Btn' : 'cursor-pointer'} key={item.index} 
+                  onClick={()=>{setSelectCategory(item.text)}}>
+                  {item.text}
+                  </li>
+              ))
+            }
         </ul>
 
 
         <div className='w-[1000px] min-h-[950px] m-auto mt-[40px] relative'>
           <ul className='w-full h-full grid grid-cols-3 gap-[95px] absolute'>
 
-          {
-            categoryItems.map((item)=>(               
+            {
+              categoryItems.map((item)=>(               
+                  
+                  item.device==="PC" ?                
+
+                  <li key={item.id} onClick={()=>{
+
+                    setSelectModal(item)
+                    openModal()
+                  }}>
+                    <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px] cursor-pointer'>
+                      <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto '/>
+                    </p>
+                    <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
+                    <p className='
+                    font-[NotoSansKR] text-[12px] font-bold text-[#626262] mb-[20px] relative top-0 left-0 after:absolute after:bottom-[-10px] after:left-0 after:block after:w-[70px] after:contents-[""] after:h-[2px] after:bg-[#1B263C]
+                    '>{item.date}
+                    </p>
+                    <p className='font-[NotoSansKR] text-[14px] font-medium text-[#050505]'>
+                      {item.tool}
+                    </p>
+                  </li>
+      
+                  :
+      
                 
-                item.device==="PC" ?                
-
                 <li key={item.id} onClick={()=>{
-
-                  setSelectModal(item)
-                  openModal()
-                }}>
-                  <p className='w-[270px] h-[210px] border-solid border-[6px] border-black box-border rounded-lg overflow-hidden mb-[40px] cursor-pointer'>
-                    <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto '/>
+                    setSelectModal(item)
+                    openModal()
+                  }}>
+                  {/* img를 감싸고있는 p태그에 group속성을 넣어주고 코드이미지를 기존에 invisible처리해주고 group에 hover하면 보이게 처리해줬다 */}
+                  <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group cursor-pointer'>
+                    <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto absolute top-0 left-0'/>
+                    <img src={item.code} alt='코드이미지' className='w-full h-[280px] absolute invisible group-hover:visible'/>
                   </p>
                   <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
                   <p className='
@@ -178,32 +203,9 @@ export default function Portfolio() {
                     {item.tool}
                   </p>
                 </li>
-    
-                :
-    
+              ))
               
-                <li key={item.id} onClick={()=>{
-
-                  setSelectModal(item)
-                  openModal()
-                }}>
-                {/* img를 감싸고있는 p태그에 group속성을 넣어주고 코드이미지를 기존에 invisible처리해주고 group에 hover하면 보이게 처리해줬다 */}
-                <p className='w-[140px] h-[280px]  overflow-hidden m-auto mb-[40px]  relative top-0 left-0 group cur'>
-                  <img src={item.image} alt='포트폴리오이미지' className='w-full h-auto absolute top-0 left-0'/>
-                  <img src={item.code} alt='코드이미지' className='w-full h-[280px] absolute invisible group-hover:visible'/>
-                </p>
-                <p className=' font-[NotoSansKR] text-[18px] font-bold'>{item.title}</p>
-                <p className='
-                font-[NotoSansKR] text-[12px] font-bold text-[#626262] mb-[20px] relative top-0 left-0 after:absolute after:bottom-[-10px] after:left-0 after:block after:w-[70px] after:contents-[""] after:h-[2px] after:bg-[#1B263C]
-                '>{item.date}
-                </p>
-                <p className='font-[NotoSansKR] text-[14px] font-medium text-[#050505]'>
-                  {item.tool}
-                </p>
-              </li>
-            ))
-            
-          }
+            }
 
           </ul>
 
@@ -212,7 +214,7 @@ export default function Portfolio() {
 
 
     
-            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[50px] z-[9999] overflow-scroll' ref={modal} >
+            <div className='w-[800px] h-[1100px] bg-white absolute left-[100px] top-[-100px] z-[9999] overflow-scroll' ref={modal} >
               <div className='w-full h-[280px] bg-[#B6B6B6] relative'>
                 <div className='w-full h-[250px] bg-gradient-to-b from-[#6D9AF4] to-[#283858] p-[40px] box-border relative'>
                       <div className='w-[210px] h-full'>
@@ -222,36 +224,33 @@ export default function Portfolio() {
                           <span className='block mt-[10px]'>창호시공 전문기업 달해기업</span> 
                         </p>
                       </div>
-                {
+                  {
+                    selectModal.device==='PC' ? 
 
-                  selectModal.device==='PC' ? 
+                      <div className='absolute right-[80px] top-[40px] w-[320px] h-[250px] border-solid border-[8px] border-black box-border rounded-lg overflow-hidden cursor-pointer group brightness-100 hover:brightness-75'
+                    
+                      >
+                        {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
+                        <button className='w-[110px] h-[34px] bg-black absolute right-[105px] top-[100px] text-white text-center text-[20px] font-bold invisible group-hover:visible'  onClick={goPage}>
+                          Go to site
+                        </button>
+                        <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
 
+                      </div>
+                  
+                    :
 
-                
-                    <div className='absolute right-[80px] top-[40px] w-[320px] h-[250px] border-solid border-[8px] border-black box-border rounded-lg overflow-hidden cursor-pointer group brightness-100 hover:brightness-75'
-                   
-                    >
+                    <div className='absolute right-[120px] top-[40px] w-[160px] h-[320px] cursor-pointer'onClick={goPage}>
                       {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
-                      <button className='w-[110px] h-[34px] bg-black absolute right-[105px] top-[100px] text-white text-center text-[20px] font-bold invisible group-hover:visible'  onClick={goPage}>
-                        Go to site
-                      </button>
                       <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
-
                     </div>
-                
-                  :
 
-                  <div className='absolute right-[120px] top-[40px] w-[160px] h-[320px] cursor-pointer'onClick={goPage}>
-                    {/* <img src='../../images/project_DH_PC.png' alt='프로젝트 이미지' className='w-full h-auto'/> */}
-                    <img src={selectModal.image} alt='프로젝트 이미지' className='w-full h-auto'/>
-                  </div>
-
-                }
+                  }
 
                     <button className='absolute right-[10px] top-[10px] text-white text-[30px]' onClick={closeModal}>
                       <AiOutlineClose/>
                     </button>
-                  </div>
+                </div>
 
               </div>
 
@@ -306,10 +305,6 @@ export default function Portfolio() {
                   또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
                   createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
                   react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
-                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
-                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
-                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
-                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
                 </p>
               </div>
               

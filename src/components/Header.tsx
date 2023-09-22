@@ -1,4 +1,6 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
+import useHeight from '../Hooks/useHeight'
+
 
 
 
@@ -7,6 +9,12 @@ export default function Header() {
 
 
 
+  // const test=PortfolioSection.current
+
+
+  // console.log([Height])
+
+  
 
   // 일단 scrollTo 로 컨트롤했지만 ref를 props로 넘겨 헤더에서 받고 받은 ref로 이동하는 방법
   // 질문하기

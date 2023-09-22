@@ -1,32 +1,18 @@
 import React, {useEffect, useState} from 'react'
 
-export default function useHeight(e:any) {
+export default function useHeight(PortfolioSection:any){
 
-  const [Height, setHeight] = useState<any>([])
-
-
-    // console.log(e.current.offsetHeight)
-
+  const [Height, setHeight] = useState<any>()
 
     useEffect(()=>{
-      setHeight(e.current.offsetHeight)
-    },[e])
+      setHeight(PortfolioSection.current.offsetHeight)
+    },[PortfolioSection])
 
     console.log(Height)
 
-    // const getHeight=useCallback(()=>{
-    
-    // },[])
-
   return (
-    <>
-    
-
-    
-
-    
-    
-    
-    </>
+     
+    [Height]
+      
   )
 }

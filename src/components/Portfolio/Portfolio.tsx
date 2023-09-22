@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useContext } from 'react'
 // import {  portfolios } from '../../model/model'
 import { portfolios } from '../../model/model';
 // import PortfolioLi from '../PortfolioLi'
@@ -7,6 +7,9 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { gsap } from 'gsap';
 import useProduct from '../../Hooks/useProduct';
 import useHeight from '../../Hooks/useHeight';
+// import { GetHeightContext, GetHeightProvider } from '../../context/GetHeightContext';
+
+
 
 
 
@@ -117,18 +120,12 @@ export default function Portfolio() {
   const PortfolioSection:any = useRef();
 
   useHeight(PortfolioSection)
-  // let PortfolioHeight:number = PortfolioSection.current.offsetHeight;
-  // let PortfolioHeight:number = 1600;
-  // useProduct(PortfolioHeight)
 
-  // function ProjectHeight():void{
-  //   const PortfolioHeight:any = PortfolioSection.current.offsetHeight;
-  //   console.log(PortfolioHeight)
 
-  //   return PortfolioHeight;
-  // }
+  // GetHeightProvider(PortfolioSection)
 
-  // console.log(ProjectHeight())
+
+  // const {Height} = useContext<number | null>(GetHeightContext)
 
   return (
     <>

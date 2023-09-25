@@ -13,18 +13,6 @@ export default function useProduct() {
     })
   }, [])
 
-
-
-  // const getHeight=useCallback((e)=>{
-  //   console.log(e)
-  // })
-
-
-  // getHeight()
-
-
-
-
   return (
     [allPortfolio]
   )

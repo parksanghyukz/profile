@@ -122,10 +122,8 @@ export default function Portfolio() {
   useHeight(PortfolioSection)
 
 
-  // GetHeightProvider(PortfolioSection)
+  
 
-
-  // const {Height} = useContext<number | null>(GetHeightContext)
 
   return (
     <>
@@ -162,7 +160,6 @@ export default function Portfolio() {
                   item.device==="PC" ?                
 
                   <li key={item.id} onClick={()=>{
-
                     setSelectModal(item)
                     openModal()
                   }}>
@@ -279,29 +276,45 @@ export default function Portfolio() {
               <div className='p-[40px] box-border w-full h-auto font-medium text-[16px] font-[NotoSansKR]'>
                 <p>
                   <span className='font-bold'>
-                    달해기업은 인테리어 시공 전문업체 웹사이트
+                    {selectModal.title}
+                    {selectModal.description?.site}
+                    {/* description이 있는지 체크하고 site를 띄워줘야한다 */}
                   </span>
-                  입니다. 
-                  제 지인이 실제로 운영하는 인테리어 업체로 제 지인에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.
+                  입니다. <br/>
+                    {selectModal.description?.siteInfo}
                 </p>
                 <p className='mb-[45px] mt-[45px]'>
-                  자바스크립트 라이브러리 언어인 react.js의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.
+                  {selectModal.description?.siteText}
                 </p>
-                <p className='text-justify'>
+                <p className='text-justify mb-2'>
                   <span className='font-bold mr-[5px]'>
-                    라우터설계 : 
+                    {selectModal.description?.infoTitle[0]}:                 
                   </span>
-                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
-                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
-                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
-                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
-                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
-                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
-                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
-                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
-                  또한 outlet 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현 했습니다.
-                  createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계 했습니다.
-                  react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하여 적응형 
+                    {selectModal.description?.infoText[0]}
+                </p>
+                <p className='text-justify mb-2'>
+                  <span className='font-bold mr-[5px]'>
+                    {selectModal.description?.infoTitle[1]}:                
+                  </span>
+                    {selectModal.description?.infoText[1]}
+                </p>
+                <p className='text-justify mb-2'>
+                  <span className='font-bold mr-[5px]'>
+                    {selectModal.description?.infoTitle[2]}:                
+                  </span>
+                    {selectModal.description?.infoText[2]}
+                </p>
+                <p className='text-justify mb-2'>
+                  <span className='font-bold mr-[5px]'>
+                    {selectModal.description?.infoTitle[3]}:                
+                  </span>
+                    {selectModal.description?.infoText[3]}
+                </p>
+                <p className='text-justify mb-2'>
+                  <span className='font-bold mr-[5px]'>
+                    {selectModal.description?.infoTitle[4]}:                
+                  </span>
+                    {selectModal.description?.infoText[4]}
                 </p>
               </div>
               

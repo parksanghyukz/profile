@@ -12,7 +12,9 @@ export interface portfolio{
   "code":string,
   "design":string,
   "editer":string,
-  "lang":string
+  "lang":string,
+  "project":string,
+  "description":any[]
 }
 
 

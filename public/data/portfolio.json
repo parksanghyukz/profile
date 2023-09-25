@@ -11,7 +11,28 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"HTML, CSS, Javascript, Gsap, SSR",
-    "project":"Personal project"
+    "project":"Personal project",
+    "description":
+    {
+      "site":"은 축구를 사랑하는 모든이에게 제공하는 축구팀 입단 서비스 플랫폼",
+      "siteInfo":"제 취미가 아이디어를 떠올리는 데 도움이 되었고 저와 같은 취미를 가진 사람들에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
+      "siteText":"HTML, CSS, JavaScript와 함께 gsap을 배우면서 웹 개발의 기본 지식을 쌓고 쌓은 지식을 활용해보고자 구현했습니다.",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":
+      [
+      "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
+      "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
+      "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
+      "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
+      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+    ]
+    }
+
+
+    
+  
+   
+    
   },
   {
     "id":"002",
@@ -25,7 +46,17 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"HTML, CSS, Javascript, Gsap, SSR",
-    "project":"Team project"
+    "project":"Team project",
+    "description":
+    {
+      "site":"은 웹사이트 개발과 운영에 필요한 서비스를 통합 제공하는 회사",
+      "siteInfo":"학원에서 서로 다른 팀원들과 같이 작업할 수 있는 장점을 가진 웹사이트라 생각해서 진행한 팀 프로젝트입니다.",
+      "siteText":"처음으로 Git을 이용하여 협업을 하고 Interaction UI를 설계하고 설계한 내용을 구현했습니다",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":["한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.","의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다."]
+    }
+
+   
   },
   {
     "id":"003",
@@ -39,7 +70,15 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"React, Swiper, Gsap, Firebase,Kakao map api",
-    "project":"Personal project"
+    "project":"Personal project",
+    "description":{
+      "site":"은 인테리어 시공 전문업체",
+      "siteInfo":"제 지인이 실제로 운영하는 인테리어 업체로 제 지인에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
+      "siteText":"자바스크립트 라이브러리 언어인 react.js의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":["한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.","의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다."]
+    }
+  
   },
   {
     "id":"004",
@@ -53,7 +92,14 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"React, Swiper, Gsap, Firebase, tailwind CSS, Typescript",
-    "project":"Personal project"
+    "project":"Personal project",
+    "description":{
+      "site":"은 박상혁이라는 사람을 소개하기 위한 프로필 SPA(Single Page Application)",
+      "siteInfo":"박상혁이라는 사람의 프론트엔드 개발에 대한 열정과 개발능력을 많은 사람들에게 알리고 싶어 진행한 프로젝트입니다.",
+      "siteText":"typescript와 tailwindcss의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":["한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.","의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다."]
+    }
   },
   {
     "id":"010",
@@ -67,7 +113,15 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"HTML, CSS, Javascript, Gsap, SSR",
-    "project":"Personal project"
+    "project":"Personal project",
+    "description":{
+     "site":"은 축구를 사랑하는 모든이에게 제공하는 축구팀 입단 서비스 플랫폼",
+      "siteInfo":"제 취미가 아이디어를 떠올리는 데 도움이 되었고 저와 같은 취미를 가진 사람들에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
+      "siteText":"HTML, CSS, JavaScript와 함께 gsap라이브러리를 배우면서 웹 개발의 기본 지식을 쌓고 쌓은 지식을 활용해보고자 구현했습니다.",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":["한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.","의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다."]
+    }
+  
   },
   {
     "id":"011",
@@ -81,6 +135,14 @@
     "design":"figma, photoshop",
     "editer":"VS code",
     "lang":"React, Swiper, Gsap, Firebase,Kakao map api",
-    "project":"Personal project"
+    "project":"Personal project",
+    "description":{
+      "site":"은 인테리어 시공 전문업체",
+      "siteInfo":"제 지인이 실제로 운영하는 인테리어 업체로 제 지인에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
+      "siteText":"자바스크립트 라이브러리 언어인 react.js의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
+      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoText":["한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.","의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다."]
+    }
+   
   }
 ]

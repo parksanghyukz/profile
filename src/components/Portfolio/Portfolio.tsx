@@ -114,11 +114,11 @@ export default function Portfolio() {
 
 
   const goGitHub=()=>{
-    if(selectModal.title==="Football Join"){
+    if(selectModal.title==="Football Join"|| selectModal.title==="Football Join(Mobile)"){
       window.open("http://parksang123.dothome.co.kr/footballjoin_rwd/index.html")
     }else if(selectModal.title==="Naming"){
       window.open("https://github.com/parksanghyukz/naming_project")
-    }else if(selectModal.title==="Dalhae"){
+    }else if(selectModal.title==="Dalhae"|| selectModal.title==="Dalhae (Mobile)"){
       window.open("https://github.com/parksanghyukz/dalhae_project")
     }else if(selectModal.title==="Profile"){
       window.open("https://github.com/parksanghyukz/profile")

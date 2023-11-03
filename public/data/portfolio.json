@@ -2,6 +2,8 @@
   {
     "id":"001",
     "title":"Football Join",
+    "infoTitle":"최고의 팀을 찾고 싶을땐",
+    "infoText":"Football Join",
     "device":"PC",
     "date":"July-05-2023",
     "tool":"html, CSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
@@ -17,14 +19,15 @@
       "site":"은 축구를 사랑하는 모든이에게 제공하는 축구팀 입단 서비스 플랫폼",
       "siteInfo":"제 취미가 아이디어를 떠올리는 데 도움이 되었고 저와 같은 취미를 가진 사람들에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
       "siteText":"HTML, CSS, JavaScript와 함께 gsap을 배우면서 웹 개발의 기본 지식을 쌓고 쌓은 지식을 활용해보고자 구현했습니다.",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["시멘틱마크업: ","css가상요소사용: ","레이아웃: ", "인터렉션UI: ", "Gsap: ", "SSR: "],
       "infoText":
       [
       "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
       "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
       "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
       "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다.",
+      "닷홈 웹사이트 호스팅을 사용해 배포했습니다."
     ]
     }
 
@@ -37,6 +40,8 @@
   {
     "id":"002",
     "title":"Naming",
+    "infoTitle":"첫인상 형성에 걸리는 시간 7초",
+    "infoText":"Web Agency Naming",
     "device":"PC",
     "date":"July-05-2023",
     "tool":"html, cSS, Javascript, gsap, swiper, figma, photoshop, git",
@@ -52,14 +57,15 @@
       "site":"은 웹사이트 개발과 운영에 필요한 서비스를 통합 제공하는 회사",
       "siteInfo":"학원에서 서로 다른 팀원들과 같이 작업할 수 있는 장점을 가진 웹사이트라 생각해서 진행한 팀 프로젝트입니다.",
       "siteText":"처음으로 Git을 이용하여 협업을 하고 Interaction UI를 설계하고 설계한 내용을 구현했습니다",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["인터렉션UI: ","Main: ", "내가 개발한 기능: "],
       "infoText":
       [
-      "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
-      "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
-      "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
-      "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다.", 
+      "메인페이지에서는 개발 인원들 끼리 협업을 하여 gsap 라이브러리의 scroll Trigger라는 기능을 사용하여 최소한의 코드로 스크롤 기반 애니메이션을 구현하였습니다.",
+      "1. 웹페이지 상단 네비게이션 메뉴를 개발했습니다. gsap라이브러리를 사용해 클릭하면 메뉴 scale을 키워 화면을 꽉 채우게 구현하고 서브페이지로 이동하거나 닫기 버튼을 클릭할경우 scale을 원래크기로 설정하도록 구현했습니다.",
+      "2. 서브페이지(story)를 개발했습니다. BOM(Browser Object Model) 브라우저 객체 모델 중 window객체를 사용해 스크롤의 높이에 따라 콘텐츠가 나타나도록 구현했고, gsap라이브러리를 사용해 처음 클릭할경우 비행기가 나타나게 구현했습니다",
+      "3. 이미지 박스에 마우스를 오버할 경우 scale이 커지는 css animation을 구현하였습니다"
+        
     ]
     }
 
@@ -68,6 +74,8 @@
   {
     "id":"003",
     "title":"Dalhae",
+    "infoTitle":"실측부터 시공까지 대표가 직접",
+    "infoText":"창호시공 전문기업 달해기업",
     "device":"PC",
     "date":"August-23-2023",
     "tool":"react, gsap, swiper, firebase, figma, photoshop",
@@ -82,14 +90,18 @@
       "site":"은 인테리어 시공 전문업체",
       "siteInfo":"제 지인이 실제로 운영하는 인테리어 업체로 제 지인에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
       "siteText":"자바스크립트 라이브러리 언어인 react.js의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["SPA: ","CSR: ", "Router 설계 및 Outlet객체: ", "내가 구현한 기능"],
       "infoText":
       [
-      "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
-      "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
-      "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
-      "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "웹 어플리케이션 제작시  하나의 페이지 즉 index.html로만 구성된 웹 어플리케이션인 Single Page Application을 개발했습니다.",
+      "사용자의 요청에 따라 필요한 부분만 응답 받아 렌더링 하는 방식인 Client Side Rendering을 구현했습니다 ",
+      "createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계했습니다 그리고 react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하였습니다. 그리고 <outlet> 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현하였습니다.",
+      "1.메인 페이지를 구현할 때에는 비주얼 영역부터 아래 섹션들의 컴포넌트를 각각 모듈화하여 코드를 간소화하고 가독성을 올리도록 구현했습니다",
+      "2.비주얼 영역에서는 사용 방법이 간편한 스와이퍼 라이브러리를 사용해 무한루프 기능과 autoplay기능을 구현했습니다.",
+      "3.Json 파일을 활용한 Products 객체 구조화 및 Axios 비동기 통신을 활용한 객체 랜더링을 구현했습니다.",
+      "4.useState(), filter(), map() 활용한 카테고리별 데이터 필터링을 구현했습니다.",
+      "5.Firebase Authentication  기능과 AuthContext 를 활용한 로그인/로그아웃 기능을 구현했습니다. "
+    
     ]
     }
   
@@ -97,6 +109,8 @@
   {
     "id":"004",
     "title":"Profile",
+    "infoTitle":"프론트엔드 개발자를 꿈꾸는",
+    "infoText":"박상혁입니다",
     "device":"PC",
     "date":"september-22-2023",
     "tool":"react, gsap, swiper, firebase, tailwind CSS, Typescript figma, photoshop,",
@@ -111,20 +125,21 @@
       "site":"은 박상혁이라는 사람을 소개하기 위한 프로필 SPA(Single Page Application)",
       "siteInfo":"박상혁이라는 사람의 프론트엔드 개발에 대한 열정과 개발능력을 많은 사람들에게 알리고 싶어 진행한 프로젝트입니다.",
       "siteText":"typescript와 tailwindcss의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["SPA: ", "Tailwind Css: ", "TypeScript: ", "하드코딩자제: "],
       "infoText":
       [
-      "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
-      "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
-      "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
-      "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "웹 어플리케이션 제작시  하나의 페이지 즉 index.html로만 구성된 웹 어플리케이션인 Single Page Application을 개발했습니다.",
+      "미리 세팅된 유틸리티 클래스를 활용하여 HTML 코드 내에서 스타일링을 지향하는 CSS프레임 워크를 사용해 스타일을 구현했습니다. 각 속성들을 클래스에 직관적으로 표현함으로써 효율적으로 사용했습니다",
+      "타입스크립트를 사용해 json파일에 타입을 지정해 코드 유지 보수성을 향상 시키도록 구현했습니다.",
+      "데이터를 하드코딩 하지않고 최대한 json파일에 넣어 map을 통해 반복되는 구조의 데이터를 효율적으로 보여주도록 구현했습니다."
     ]
     }
   },
   {
     "id":"010",
     "title":"Football Join(Mobile)",
+    "infoTitle":"최고의 팀을 찾고 싶을땐",
+    "infoText":"Football Join",
     "device":"Mobile",
     "date":"July-05-2023",
     "tool":"html, cSS, Javascript, gsap, swiper, gsap, figma, photoshop, figma user",
@@ -139,14 +154,16 @@
      "site":"은 축구를 사랑하는 모든이에게 제공하는 축구팀 입단 서비스 플랫폼",
       "siteInfo":"제 취미가 아이디어를 떠올리는 데 도움이 되었고 저와 같은 취미를 가진 사람들에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
       "siteText":"HTML, CSS, JavaScript와 함께 gsap라이브러리를 배우면서 웹 개발의 기본 지식을 쌓고 쌓은 지식을 활용해보고자 구현했습니다.",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["시멘틱마크업: ","css가상요소사용: ","레이아웃: ", "인터렉션UI: ", "Gsap: ", "SSR: ", "적응형 모바일 웹: "],
       "infoText":
       [
       "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
       "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
       "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
       "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다.",
+      "닷홈 웹사이트 호스팅을 사용해 배포했습니다.",
+      "모바일 아코디언 메뉴 2depth객체 인터렉션을 구현했습니다."
     ]
     }
   
@@ -154,6 +171,8 @@
   {
     "id":"011",
     "title":"Dalhae (Mobile)",
+    "infoTitle":"실측부터 시공까지 대표가 직접",
+    "infoText":"창호시공 전문기업 달해기업",
     "device":"Mobile",
     "date":"August-23-2023",
     "tool":"react, gsap, swiper, firebase, figma, photoshop",
@@ -168,14 +187,19 @@
       "site":"은 인테리어 시공 전문업체",
       "siteInfo":"제 지인이 실제로 운영하는 인테리어 업체로 제 지인에게 도움이 되고 싶은 마음에 진행한 프로젝트입니다.",
       "siteText":"자바스크립트 라이브러리 언어인 react.js의 기초문법을 이해하고 공부한 내용을 활용해보고자 구현했습니다.",
-      "infoTitle":["시멘틱마크업","css가상요소 사용","웹접근성","반응형 작업", "레이아웃", "인터렉션UI", "Gsap"],
+      "infoTitle":["적응형 모바일 웹: ","SPA: ","CSR: ", "Router 설계 및 Outlet객체: ", "내가 구현한 기능"],
       "infoText":
       [
-      "한국형 웹 접근성 지침 (KWCAG) 을 준수한 Semantic-Markup을 했습니다.",
-      "의미가 없는 시각적인 요소를 디자인 하기 위해 마크업없이 css 가상요소인 before,after를 사용해 시각적인 요소를 표현했습니다.",
-      "CSS 3.0 Flex 및 Grid 레이아웃 기반의 PC는 물론 Tarblet PC, Smart Phone 디스플레이 환경에서도 스마트한 웹페이지 구현을 위해 라이브러리를 사용하지않고 디바이스별 크기를 최적화 하는 반응형 작업을 했습니다",
-      "인터렉션 2Depth 네비게이션 및 메인 비쥬얼 슬라이드를 하드코딩해 구현했습니다",
-      "Gsap 라이브러리를 사용해 인터렉션 UI를 개발했습니다."
+      "모바일 메인페이지에 스와이퍼를 두가지 사용해 UI를 개발했고, 2depth 객체를 사용한 모바일  Accordionmenu를 인터렉션 구현했습니다.",
+      "웹 어플리케이션 제작시  하나의 페이지 즉 index.html로만 구성된 웹 어플리케이션인 Single Page Application을 개발했습니다.",
+      "사용자의 요청에 따라 필요한 부분만 응답 받아 렌더링 하는 방식인 Client Side Rendering을 구현했습니다 ",
+      "createBrowserRouter 라는 react-router-dom의 훅을 사용해 시작하자마자 보여줄 요소를 설계하고 경로에 따라 보여지는 컴포넌트를 설계했습니다 그리고 react-device-detect API를 사용하여 모바일과 pc버전 router를 분리하였습니다. 그리고 <outlet> 객체를 활용하여 헤더와 푸터를 고정시켜 효율적으로 랜더링을 구현하였습니다.",
+      "1.메인 페이지를 구현할 때에는 비주얼 영역부터 아래 섹션들의 컴포넌트를 각각 모듈화하여 코드를 간소화하고 가독성을 올리도록 구현했습니다",
+      "2.비주얼 영역에서는 사용 방법이 간편한 스와이퍼 라이브러리를 사용해 무한루프 기능과 autoplay기능을 구현했습니다.",
+      "3.Json 파일을 활용한 Products 객체 구조화 및 Axios 비동기 통신을 활용한 객체 랜더링을 구현했습니다.",
+      "4.useState(), filter(), map() 활용한 카테고리별 데이터 필터링을 구현했습니다.",
+      "5.Firebase Authentication  기능과 AuthContext 를 활용한 로그인/로그아웃 기능을 구현했습니다. "
+    
     ]
     }
    

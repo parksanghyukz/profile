@@ -4,6 +4,8 @@ export interface portfolio{
   // 여러개 export할 경우 사용할 컴포넌트에서 {}안에 ,를 사용해 여러개 가져올 수 있음
   "id":string,
   "title":string,
+  "infoTitle":string,
+  "infoText":string,
   "device":string,
   "date":string,
   "tool":string,
@@ -14,7 +16,8 @@ export interface portfolio{
   "editer":string,
   "lang":string,
   "project":string,
-  "description":any[]
+  "description":any[],
+  
 }
 
 
